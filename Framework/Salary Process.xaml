@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1023.2,9656.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1023.2,9909.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Salary_Process_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
       <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Salary_Process" sap:VirtualizedContainerService.HintSize="1033.6,9592" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Salary_Process" sap:VirtualizedContainerService.HintSize="1033.6,9844.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Read_SalaryPdf" />
       <Variable x:TypeArguments="x:String" Name="Salary_Folder" />
@@ -230,7 +230,7 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[is_AttachmentIcon]" DisplayName="Check Attachment icon Element Exists or not" sap:VirtualizedContainerService.HintSize="971.2,8420" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[is_AttachmentIcon]" DisplayName="Check Attachment icon Element Exists or not" sap:VirtualizedContainerService.HintSize="971.2,8672.8" sap2010:WorkflowViewState.IdRef="If_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,7 +238,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="937.6,7708.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+        <Sequence sap:VirtualizedContainerService.HintSize="937.6,7961.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -278,7 +278,7 @@
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <If Condition="[is_SalaryAttachment]" DisplayName="check Attachment is exists or not" sap:VirtualizedContainerService.HintSize="894.4,7324.8" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[is_SalaryAttachment]" DisplayName="check Attachment is exists or not" sap:VirtualizedContainerService.HintSize="894.4,7577.6" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -286,7 +286,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="860.8,6613.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="860.8,6866.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="Is_Salary" />
                   <Variable x:TypeArguments="x:Boolean" Name="IsSave" />
@@ -412,7 +412,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="salary pdf tab" sap:VirtualizedContainerService.HintSize="483.20000000000005,284" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="503f5442f7995cff3d1b3033efbfe5a5" Selector="&lt;html app='chrome.exe' title='Directorate of Housing' /&gt;" UiBrowser="[Salary_PdfPage]">
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="salary pdf tab" sap:VirtualizedContainerService.HintSize="817.6,284" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="503f5442f7995cff3d1b3033efbfe5a5" Selector="&lt;html app='chrome.exe' title='Directorate of Housing' /&gt;" UiBrowser="[Salary_PdfPage]">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -537,7 +537,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Assign sap:VirtualizedContainerService.HintSize="817.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign sap:VirtualizedContainerService.HintSize="817.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[PDFRead]</OutArgument>
                   </Assign.To>
@@ -545,10 +545,10 @@
                     <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:RetryScope DisplayName="Retry read salary pdf" sap:VirtualizedContainerService.HintSize="817.6,681.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="4">
+                <ui:RetryScope DisplayName="Retry read salary pdf" sap:VirtualizedContainerService.HintSize="817.6,682.4" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="4">
                   <ui:RetryScope.ActivityBody>
                     <ActivityAction>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="496,390.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="496,391.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -564,7 +564,7 @@
                             </ActivityFunc>
                           </ui:ReadPDFWithOCR.OCREngine>
                         </ui:ReadPDFWithOCR>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[PDFRead]</OutArgument>
                           </Assign.To>
@@ -582,19 +582,19 @@
                   </ui:RetryScope.Condition>
                 </ui:RetryScope>
                 <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Read_Keywords]" DisplayName="Read Keywords Workbook in process folder" sap:VirtualizedContainerService.HintSize="817.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[In_Config(&quot;Salary_Keywordsfilepath&quot;).ToString]" />
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Read_Keywords]" DisplayName="For Each Row in keyword Data Table" sap:VirtualizedContainerService.HintSize="817.6,4063.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Read_Keywords]" DisplayName="For Each Row in keyword Data Table" sap:VirtualizedContainerService.HintSize="817.6,4314.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd2:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="784,3947.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="784,4198.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[read_SalaryPDF.Contains(CurrentRow(&quot;KeyWords&quot;).ToString)]" DisplayName="Check keywords contains in attachment" sap:VirtualizedContainerService.HintSize="721.6,3835.2" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[read_SalaryPDF.Contains(CurrentRow(&quot;KeyWords&quot;).ToString)]" DisplayName="Check keywords contains in attachment" sap:VirtualizedContainerService.HintSize="721.6,4086.4" sap2010:WorkflowViewState.IdRef="If_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -602,7 +602,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="688,3124.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <Sequence sap:VirtualizedContainerService.HintSize="688,3376" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="Regex1" />
                                 <Variable x:TypeArguments="x:String" Name="Regex2" />
@@ -617,9 +617,10 @@
                                   <OutArgument x:TypeArguments="x:String">[Regex1]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(read_SalaryPDF,""+CurrentRow("KeyWords").ToString+" (.*)".ToString).Groups(1).ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(read_SalaryPDF,""+CurrentRow("KeyWords").ToString+"(.*)".ToString).Groups(1).ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="644.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Regex1.ToString]" />
                               <Assign DisplayName="Extract number in above extract line item" sap:VirtualizedContainerService.HintSize="644.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[Regex2]</OutArgument>
@@ -628,6 +629,7 @@
                                   <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Regex1,"\d+".ToString).ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="644.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[Regex2.ToString]" />
                               <If Condition="[IsNumeric(Regex2)]" DisplayName="Check amount value(Regex2) is empty or not " sap:VirtualizedContainerService.HintSize="644.8,2792" sap2010:WorkflowViewState.IdRef="If_5">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
