@@ -16,7 +16,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,1290.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>718.4,1290.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -146,7 +146,7 @@
               <av:PointCollection x:Key="ConnectorLocation">110,630.8 110,660.8 210,660.8 210,715.6</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful." DisplayName="Success" sap:VirtualizedContainerService.HintSize="884,4704.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful." DisplayName="Success" sap:VirtualizedContainerService.HintSize="588.8,816.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -154,14 +154,14 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]" DisplayName="If TransactionItem is a QueueItem (Success)" sap:VirtualizedContainerService.HintSize="821.6,4378.4" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]" DisplayName="If TransactionItem is a QueueItem (Success)" sap:VirtualizedContainerService.HintSize="526.4,490.4" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
-                <ui:RetryScope ContinueOnError="{x:Null}" DisplayName="Retry Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberSetTransactionStatus&quot;))]" RetryInterval="{x:Null}">
+                <ui:RetryScope DisplayName="Retry Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberSetTransactionStatus&quot;))]">
                   <ui:RetryScope.ActivityBody>
                     <ActivityAction>
                       <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="436.8,424.8" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                         <TryCatch.Try>
-                          <ui:SetTransactionStatus AssociatedFilePath="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Set transaction status (Successful)" ErrorType="Application" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,193.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_4" ServiceBaseAddress="{x:Null}" Status="Successful" TransactionItem="[in_TransactionItem]">
+                          <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" DisplayName="Set transaction status (Successful)" ErrorType="Application" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,193.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_4" Status="Successful" TransactionItem="[in_TransactionItem]">
                             <ui:SetTransactionStatus.Analytics>
                               <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                             </ui:SetTransactionStatus.Analytics>
@@ -218,28 +218,34 @@
                 </ui:RetryScope>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="788,4142.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492.8,254.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="BOT Remarks" sap:VirtualizedContainerService.HintSize="744.8,4052.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <Sequence DisplayName="BOT Remarks" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Remarks process" sap:VirtualizedContainerService.HintSize="682.4,3940.8" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                    <TryCatch DisplayName="Remarks process" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <ui:BrowserScope Browser="[in_ERP_Browserpage]" BrowserType="Chrome" ContinueOnError="{x:Null}" DisplayName="Attach Browser ERP page" sap:VirtualizedContainerService.HintSize="645.6,3709.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}">
+                        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_ERP_Browserpage]" BrowserType="Chrome" DisplayName="Attach Browser ERP page" sap:VirtualizedContainerService.HintSize="622.4,2583.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
                           <ui:BrowserScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="612,3520.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="588.8,2474.4" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:Boolean" Name="is_completedPopup" />
                                 </Sequence.Variables>
@@ -248,7 +254,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="BOT Remarks process started Log Message" sap:VirtualizedContainerService.HintSize="549.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Bot remarks process started&quot;]">
+                                <ui:LogMessage DisplayName="BOT Remarks process started Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Bot remarks process started&quot;]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -256,8 +262,8 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="BOT Remarks process started Log Message" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="549.6,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[Now.ToString+vbTab+&quot;Bot remarks process started&quot;]" UseDefaultEncoding="False" />
-                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Bot tab" sap:VirtualizedContainerService.HintSize="549.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                <ui:AppendLine File="{x:Null}" DisplayName="BOT Remarks process started Log Message" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="526.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[Now.ToString+vbTab+&quot;Bot remarks process started&quot;]" UseDefaultEncoding="False" />
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Bot tab" sap:VirtualizedContainerService.HintSize="526.4,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                                   <ui:Click.CursorPosition>
                                     <ui:CursorPosition Position="Center">
                                       <ui:CursorPosition.OffsetX>
@@ -269,7 +275,7 @@
                                     </ui:CursorPosition>
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66930fe8-6fe3-4e1a-8028-f644123da892" InformativeScreenshot="a6ad460a19f5cfa2444951b551516161" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl parentid='204' tag='A' visibleinnertext='BOT' /&gt;">
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66930fe8-6fe3-4e1a-8028-f644123da892" InformativeScreenshot="a6ad460a19f5cfa2444951b551516161" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl parentid='20*' tag='A' visibleinnertext='BOT' aaname='BOT' /&gt;">
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
@@ -279,13 +285,13 @@
                                     </ui:Target>
                                   </ui:Click.Target>
                                 </ui:Click>
-                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="549.6,2269.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" MaxIterations="{x:Null}" Values="[in_Config.Keys]">
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="526.4,1223.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Config.Keys]">
                                   <ui:ForEach.Body>
                                     <ActivityAction x:TypeArguments="x:String">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.8,2081.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.8,1035.2" sap2010:WorkflowViewState.IdRef="Sequence_51">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -312,7 +318,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+&quot;Family number is not available in the famikly book&quot;]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[vbNewLine+&quot;Family number is not available in the famikly book&quot;]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -356,7 +362,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+&quot;Town number is not available in the famikly book&quot;]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[vbNewLine+&quot;Town number is not available in the famikly book&quot;]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -394,7 +400,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+&quot;Date of birth is not available in the famikly book&quot;]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[vbNewLine+&quot;Date of birth is not available in the famikly book&quot;]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -432,7 +438,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+&quot;Arabic name is not available in the famikly book&quot;]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[vbNewLine+&quot;Arabic name is not available in the famikly book&quot;]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -470,7 +476,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+&quot;Passport number is not available in the famikly book&quot;]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[vbNewLine+&quot;Passport number is not available in the famikly book&quot;]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -508,7 +514,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_67" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;No EID number&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_67" Text="[vbNewLine+in_Config(&quot;No EID number&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -526,7 +532,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Nation ID report" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Nation ID report" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -568,7 +574,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;EID_Remarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[vbNewLine+in_Config(&quot;EID_Remarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -606,7 +612,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in  Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_19" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;EID_ExRemarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in  Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_19" Text="[vbNewLine+in_Config(&quot;EID_ExRemarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName=' *ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -618,7 +624,7 @@
                                                     </ui:Target>
                                                   </ui:TypeInto.Target>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Nation ID report" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Nation ID report" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -647,17 +653,17 @@
                                             </If.Else>
                                           </If>
                                         </Sequence>
-                                        <Sequence DisplayName="Salray Remarks" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_166">
+                                        <Sequence DisplayName="Salray Remarks" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_166">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[currentItem.ToString = &quot;Salary_Remarks&quot;]" DisplayName="Salary Remarks config keys check" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_56">
+                                          <If Condition="[currentItem.ToString = &quot;Salary_Remarks&quot;]" DisplayName="Salary Remarks config keys check" sap:VirtualizedContainerService.HintSize="410.4,576" sap2010:WorkflowViewState.IdRef="If_56">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
@@ -668,7 +674,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_63" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;Salary_Remarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_63" Text="[vbNewLine+in_Config(&quot;Salary_Remarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -686,7 +692,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click 'INPUT  ContentPlaceHold...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Salary certificate" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -698,7 +704,7 @@
                                                     </ui:CursorPosition>
                                                   </ui:Click.CursorPosition>
                                                   <ui:Click.Target>
-                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3315354-ef46-48f8-ada8-d3b84ebe599e" InformativeScreenshot="bd93e6671b6316b058dcfe86b087a20f" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/application/*' /&gt;&lt;webctrl class='AppTb' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='checkbox' aaname='شهادة الراتب' /&gt;">
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3315354-ef46-48f8-ada8-d3b84ebe599e" InformativeScreenshot="bd93e6671b6316b058dcfe86b087a20f" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl class='AppTb' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='checkbox' aaname='شهادة الراتب' /&gt;">
                                                       <ui:Target.TimeoutMS>
                                                         <InArgument x:TypeArguments="x:Int32" />
                                                       </ui:Target.TimeoutMS>
@@ -720,7 +726,7 @@
                                               </Sequence>
                                             </If.Else>
                                           </If>
-                                          <If Condition="[currentItem.ToString = &quot;Salary_ExRemarks&quot;]" DisplayName="Salary Remarks config keys check" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_57">
+                                          <If Condition="[currentItem.ToString = &quot;Salary_ExRemarks&quot;]" DisplayName="Salary Remarks config keys check" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="If_57">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -734,7 +740,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in  Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_64" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;Salary_ExRemarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in  Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_64" Text="[vbNewLine+in_Config(&quot;Salary_ExRemarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -753,10 +759,10 @@
                                             </If.Else>
                                           </If>
                                         </Sequence>
-                                        <Sequence DisplayName="Real Estate Remarks" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                        <Sequence DisplayName="Real Estate Remarks" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
@@ -774,7 +780,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_9" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;RealEstate_Remarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[vbNewLine+in_Config(&quot;RealEstate_Remarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -812,7 +818,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in  Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_14" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;RealEstate_ExRemarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in  Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_14" Text="[vbNewLine+in_Config(&quot;RealEstate_ExRemarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -853,10 +859,10 @@
                                             </If.Else>
                                           </If>
                                         </Sequence>
-                                        <Sequence DisplayName="Social Services remarks" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                        <Sequence DisplayName="Social Services remarks" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
@@ -874,7 +880,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_10" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SocialServices&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[vbNewLine+in_Config(&quot;SocialServices&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -912,7 +918,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in  Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SocialServices_ExRemarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in  Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_15" Text="[vbNewLine+in_Config(&quot;SocialServices_ExRemarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -924,7 +930,7 @@
                                                     </ui:Target>
                                                   </ui:TypeInto.Target>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click 'INPUT  ContentPlaceHold...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ContentPlaceHold...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -960,7 +966,7 @@
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[currentItem.ToString = &quot;SDTPS_Remark&quot;]" DisplayName="SDTPS Remarks config keys check" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_18">
+                                          <If Condition="[currentItem.ToString = &quot;SDTPS_Remark&quot;]" DisplayName="SDTPS Remarks config keys check" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="If_18">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -974,7 +980,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SDTPS_Remark&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[vbNewLine+in_Config(&quot;SDTPS_Remark&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -998,10 +1004,10 @@
                                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_59" />
                                             </If.Else>
                                           </If>
-                                          <If Condition="[currentItem.ToString = &quot;SDTPS_ExRemarks&quot;]" DisplayName="SDTPS Remarks config keys check" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_25">
+                                          <If Condition="[currentItem.ToString = &quot;SDTPS_ExRemarks&quot;]" DisplayName="SDTPS Remarks config keys check" sap:VirtualizedContainerService.HintSize="410.4,576" sap2010:WorkflowViewState.IdRef="If_25">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
@@ -1012,7 +1018,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in  Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SDTPS_ExRemarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in  Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_16" Text="[vbNewLine+in_Config(&quot;SDTPS_ExRemarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1024,7 +1030,7 @@
                                                     </ui:Target>
                                                   </ui:TypeInto.Target>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Planning and survey (SDTPS)" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Planning and survey (SDTPS)" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -1053,10 +1059,10 @@
                                             </If.Else>
                                           </If>
                                         </Sequence>
-                                        <Sequence DisplayName="SHZP remarks" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <Sequence DisplayName="SHZP remarks" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
@@ -1074,7 +1080,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_12" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SHZP_Remark&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_12" Text="[vbNewLine+in_Config(&quot;SHZP_Remark&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1118,7 +1124,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_17" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SHZP_LoadingRemark&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_17" Text="[vbNewLine+in_Config(&quot;SHZP_LoadingRemark&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1143,10 +1149,10 @@
                                             </If.Else>
                                           </If>
                                         </Sequence>
-                                        <Sequence DisplayName=" MSD remarks" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                        <Sequence DisplayName=" MSD remarks" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
@@ -1164,7 +1170,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_20" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;MSD_Remarks&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_20" Text="[vbNewLine+in_Config(&quot;MSD_Remarks&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1208,7 +1214,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in Exception text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_21" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;MSD_LoadingRemark&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in Exception text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_21" Text="[vbNewLine+in_Config(&quot;MSD_LoadingRemark&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1220,7 +1226,7 @@
                                                     </ui:Target>
                                                   </ui:TypeInto.Target>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Ministry of Community Development" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Ministry of Community Development" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -1255,14 +1261,14 @@
                                             </If.Else>
                                           </If>
                                         </Sequence>
-                                        <Sequence DisplayName="SEDD remarks" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                        <Sequence DisplayName="SEDD remarks" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_64">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[currentItem.ToString = &quot;SEDD_Remark&quot;]" DisplayName="SEDD Remarks config keys check" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_21">
+                                          <If Condition="[currentItem.ToString = &quot;SEDD_Remark&quot;]" DisplayName="SEDD Remarks config keys check" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="If_21">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1276,7 +1282,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_13" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SEDD_Remark&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_13" Text="[vbNewLine+in_Config(&quot;SEDD_Remark&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1300,10 +1306,10 @@
                                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_63" />
                                             </If.Else>
                                           </If>
-                                          <If Condition="[currentItem.ToString = &quot;SEDD_LoadingRemark&quot;]" DisplayName="SEDD Remarks config keys check" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_24">
+                                          <If Condition="[currentItem.ToString = &quot;SEDD_LoadingRemark&quot;]" DisplayName="SEDD Remarks config keys check" sap:VirtualizedContainerService.HintSize="410.4,576" sap2010:WorkflowViewState.IdRef="If_24">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
@@ -1314,7 +1320,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type remarks in completed text area" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_18" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[vbNewLine+in_Config(&quot;SEDD_LoadingRemark&quot;).ToString]">
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type remarks in completed text area" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_18" Text="[vbNewLine+in_Config(&quot;SEDD_LoadingRemark&quot;).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b43f2f-d1ed-4464-90f1-00a9a1c0f4c9" InformativeScreenshot="064d9f0a8c60d6bef5ac52833591fcee" Selector="&lt;html app='chrome.exe' title='10.25.5.14/DHP/views/*' /&gt;&lt;webctrl tableRow='4' tag='TEXTAREA' colName='*ملاحظات المكتملة:' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -1332,7 +1338,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:TypeInto>
-                                                <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click benefit economic development" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click benefit economic development" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -1371,7 +1377,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ForEach>
-                                <ui:CommentOut DisplayName="Save button Comment Out" sap:VirtualizedContainerService.HintSize="549.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_22">
+                                <ui:CommentOut DisplayName="Save button Comment Out" sap:VirtualizedContainerService.HintSize="526.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_22">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,219.2" sap2010:WorkflowViewState.IdRef="Sequence_174">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -1410,7 +1416,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
-                                <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Bot completed Element popup Exists or not" Exists="[is_completedPopup]" sap:VirtualizedContainerService.HintSize="549.6,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_7" Result="{x:Null}">
+                                <ui:UiElementExists DisplayName="Bot completed Element popup Exists or not" Exists="[is_completedPopup]" sap:VirtualizedContainerService.HintSize="526.4,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                                   <ui:UiElementExists.Target>
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1da9daf0-4b0b-49c4-a8ee-0a71007ac216" InformativeScreenshot="0d0b7e0bc31555fb88e9959b7f8ad5a8" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='10.25.5.14/DHP/views/*' /&gt;&lt;ctrl name='10.25.5.14 says' role='dialog' /&gt;&lt;ctrl idx='2' role='pane' /&gt;">
                                       <ui:Target.TimeoutMS>
@@ -1428,7 +1434,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:UiElementExists>
-                                <If Condition="[is_completedPopup]" DisplayName="check Bot completed Element popup Exists or not" sap:VirtualizedContainerService.HintSize="549.6,52.8" sap2010:WorkflowViewState.IdRef="If_61">
+                                <If Condition="[is_completedPopup]" DisplayName="check Bot completed Element popup Exists or not" sap:VirtualizedContainerService.HintSize="526.4,52.8" sap2010:WorkflowViewState.IdRef="If_61">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1442,7 +1448,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
                                         <ui:Click.CursorPosition>
                                           <ui:CursorPosition Position="Center">
                                             <ui:CursorPosition.OffsetX>
@@ -1476,7 +1482,7 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <ui:LogMessage DisplayName="BOT Remarks process cmpleted Log Message" sap:VirtualizedContainerService.HintSize="549.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Bot remarks process completed&quot;]">
+                                <ui:LogMessage DisplayName="BOT Remarks process cmpleted Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Bot remarks process completed&quot;]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1484,7 +1490,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="BOT Remarks process completed Log Message" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="549.6,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[Now.ToString+vbTab+&quot;Bot remarks process completed&quot;]" UseDefaultEncoding="False" />
+                                <ui:AppendLine File="{x:Null}" DisplayName="BOT Remarks process completed Log Message" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="526.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[Now.ToString+vbTab+&quot;Bot remarks process completed&quot;]" UseDefaultEncoding="False" />
                               </Sequence>
                             </ActivityAction>
                           </ui:BrowserScope.Body>
@@ -1497,7 +1503,7 @@
                         </ui:BrowserScope>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="648.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="625.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1522,7 +1528,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LogMessage>
-                              <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="Foot print(Tickect raise) login issue Log Message" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_6" Text="[Now.ToString+vbTab+&quot;ERP page loading issue in BOT remarks area&quot;]" UseDefaultEncoding="False" />
+                              <ui:AppendLine File="{x:Null}" DisplayName="Foot print(Tickect raise) login issue Log Message" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_6" Text="[Now.ToString+vbTab+&quot;ERP page loading issue in BOT remarks area&quot;]" UseDefaultEncoding="False" />
                             </Sequence>
                           </ActivityAction>
                         </Catch>
@@ -1532,7 +1538,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log Success with additional logging fields" sap:VirtualizedContainerService.HintSize="821.6,143.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log Success with additional logging fields" sap:VirtualizedContainerService.HintSize="526.4,143.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1626,7 +1632,7 @@
                       <av:Size x:Key="ShapeSize">200,52.8</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" MaxIterations="{x:Null}" Values="[in_Config.Keys]">
+                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_Config.Keys]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -1666,7 +1672,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:LogMessage DisplayName="Log Message (Consecutive exceptions)" sap:VirtualizedContainerService.HintSize="652.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Consecutive system exception counter is &quot; + io_ConsecutiveSystemExceptions.ToString + &quot;.&quot;]" />
                                   <ui:LogMessage DisplayName="Log Message (Get System exceptions)" sap:VirtualizedContainerService.HintSize="652.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Get System Exception or login exception&quot;]" />
-                                  <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="Log Message (Get System exceptions)" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="652.8,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[Now.ToString+vbTab+&quot;Get System Exception or login exception&quot;]" UseDefaultEncoding="False" />
+                                  <ui:AppendLine File="{x:Null}" DisplayName="Log Message (Get System exceptions)" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="652.8,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[Now.ToString+vbTab+&quot;Get System Exception or login exception&quot;]" UseDefaultEncoding="False" />
                                   <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="652.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
                                     <ui:CommentOut.Body>
                                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,439.2" sap2010:WorkflowViewState.IdRef="Sequence_133">
@@ -1852,7 +1858,7 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <TryCatch DisplayName="TryLogin Exception process" sap:VirtualizedContainerService.HintSize="798.4,5118.4" sap2010:WorkflowViewState.IdRef="TryCatch_18">
                                                   <TryCatch.Try>
-                                                    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" BrowserType="Chrome" CommunicationMethod="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Open Foot Print page" Hidden="{x:Null}" sap:VirtualizedContainerService.HintSize="761.6,4887.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="[Open_FootPrint]" Url="http://10.25.6.12/MRcgi/MRentrancePage.pl" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}">
+                                                    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Foot Print page" sap:VirtualizedContainerService.HintSize="761.6,4887.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[Open_FootPrint]" Url="http://10.25.6.12/MRcgi/MRentrancePage.pl">
                                                       <ui:OpenBrowser.Body>
                                                         <ActivityAction x:TypeArguments="x:Object">
                                                           <ActivityAction.Argument>
@@ -1867,8 +1873,8 @@
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:MaximizeWindow ContinueOnError="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="665.6,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" Window="{x:Null}" />
-                                                            <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Login credential Page exits or not" Exists="[is_FootLoginPage]" sap:VirtualizedContainerService.HintSize="665.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4" Result="{x:Null}">
+                                                            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="665.6,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                                                            <ui:UiElementExists DisplayName="Login credential Page exits or not" Exists="[is_FootLoginPage]" sap:VirtualizedContainerService.HintSize="665.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                                                               <ui:UiElementExists.Target>
                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="32bf3c8e-c5c4-42d0-b26b-2f2c0c76e3d6" InformativeScreenshot="f34d36106ace2be0907f00efdbf32a3d" Selector="&lt;webctrl id='centralLoginContent' tag='DIV' /&gt;">
                                                                   <ui:Target.TimeoutMS>
@@ -1903,7 +1909,7 @@
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Username " EmptyField="True" sap:VirtualizedContainerService.HintSize="588.8,156" sap2010:WorkflowViewState.IdRef="TypeInto_49" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="sanad.bot">
+                                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Username " EmptyField="True" sap:VirtualizedContainerService.HintSize="588.8,156" sap2010:WorkflowViewState.IdRef="TypeInto_49" Text="sanad.bot">
                                                                     <ui:TypeInto.Target>
                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a8a6db8-952f-46b0-bc08-055f18332521" InformativeScreenshot="0f906da796ed8baef4f9b178e9ebb8b1" Selector="&lt;webctrl tag='INPUT' name='USER' idx='1' /&gt;">
                                                                         <ui:Target.TimeoutMS>
@@ -1915,7 +1921,7 @@
                                                                       </ui:Target>
                                                                     </ui:TypeInto.Target>
                                                                   </ui:TypeInto>
-                                                                  <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="588.8,156" sap2010:WorkflowViewState.IdRef="TypeInto_50" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="snd2020*">
+                                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="588.8,156" sap2010:WorkflowViewState.IdRef="TypeInto_50" Text="snd2020*">
                                                                     <ui:TypeInto.Target>
                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f58651c-a1e2-41f6-9dc9-b300c123ffcb" InformativeScreenshot="2adaf7f32ed211be32ec9531129186ab" Selector="&lt;webctrl tag='INPUT' type='password' name='PASSWORD' /&gt;">
                                                                         <ui:Target.TimeoutMS>
@@ -1927,7 +1933,7 @@
                                                                       </ui:Target>
                                                                     </ui:TypeInto.Target>
                                                                   </ui:TypeInto>
-                                                                  <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click 'INPUT  button'" sap:VirtualizedContainerService.HintSize="588.8,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  button'" sap:VirtualizedContainerService.HintSize="588.8,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                     <ui:Click.CursorPosition>
                                                                       <ui:CursorPosition Position="Center">
                                                                         <ui:CursorPosition.OffsetX>
@@ -1949,7 +1955,7 @@
                                                                       </ui:Target>
                                                                     </ui:Click.Target>
                                                                   </ui:Click>
-                                                                  <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Request page is exists or not" Exists="[is_requestPage]" sap:VirtualizedContainerService.HintSize="588.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5" Result="{x:Null}">
+                                                                  <ui:UiElementExists DisplayName="Request page is exists or not" Exists="[is_requestPage]" sap:VirtualizedContainerService.HintSize="588.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                                                                     <ui:UiElementExists.Target>
                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="375f7412-5ba3-4e3d-a026-f2f5ba99257d" InformativeScreenshot="0867a0440da29bccc9b3dca61bdc8ba7" Selector="&lt;webctrl id='Project' tag='A' aaname='IT Service Desk' /&gt;">
                                                                         <ui:Target.TimeoutMS>
@@ -1978,7 +1984,7 @@
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Is New request tab or not" Exists="[is_newRequest]" sap:VirtualizedContainerService.HintSize="512,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_6" Result="{x:Null}">
+                                                                        <ui:UiElementExists DisplayName="Is New request tab or not" Exists="[is_newRequest]" sap:VirtualizedContainerService.HintSize="512,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                                                                           <ui:UiElementExists.Target>
                                                                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c26dde09-2485-4eef-b7c9-67b0ec1a0a7d" InformativeScreenshot="a192fb030727fdeb2dabd4b234161e8c" Selector="&lt;webctrl id='tb_submit' tag='A' aaname='  طلب جديد' /&gt;">
                                                                               <ui:Target.TimeoutMS>
@@ -1998,7 +2004,7 @@
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click New Request tab" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                                                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click New Request tab" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                                 <ui:Click.CursorPosition>
                                                                                   <ui:CursorPosition Position="Center">
                                                                                     <ui:CursorPosition.OffsetX>
@@ -2576,7 +2582,7 @@
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_53" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="خطأ في الخادم في تطبيق /DHP.">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_53" Text="خطأ في الخادم في تطبيق /DHP.">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c90a45b1-1f6a-457b-919c-2df8b9b68bc5" InformativeScreenshot="1ad3d42e58f8a9af2e3fcfca9470543e" Selector="&lt;webctrl id='table_*' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='cmt' tableRow='1' tag='INPUT' aaname='Title - العنوان*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -2680,7 +2686,7 @@
                                                                                         </ui:Target>
                                                                                       </ui:SelectItem.Target>
                                                                                     </ui:SelectItem>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_54" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="Description">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_54" Text="Description">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3a4f614-ab05-4e1d-8b1e-e02eaf0d75fe" InformativeScreenshot="b24f68275c37d0ed56fe2746272ac5f4" Selector="&lt;webctrl tableRow='1' tag='TABLE' idx='9' /&gt;&lt;webctrl id='descrpt' tableRow='1' tag='TEXTAREA' aaname='Description - الوصف*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -2751,7 +2757,7 @@
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_68" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="مشكلة في تسجيل الدخول الى ERP المستخدم او كلمة السر غير صحيحة">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_68" Text="مشكلة في تسجيل الدخول الى ERP المستخدم او كلمة السر غير صحيحة">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c90a45b1-1f6a-457b-919c-2df8b9b68bc5" InformativeScreenshot="1ad3d42e58f8a9af2e3fcfca9470543e" Selector="&lt;webctrl id='table_*' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='cmt' tableRow='1' tag='INPUT' aaname='Title - العنوان*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -2855,7 +2861,7 @@
                                                                                         </ui:Target>
                                                                                       </ui:SelectItem.Target>
                                                                                     </ui:SelectItem>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_69" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="Description">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_69" Text="Description">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3a4f614-ab05-4e1d-8b1e-e02eaf0d75fe" InformativeScreenshot="b24f68275c37d0ed56fe2746272ac5f4" Selector="&lt;webctrl tableRow='1' tag='TABLE' idx='9' /&gt;&lt;webctrl id='descrpt' tableRow='1' tag='TEXTAREA' aaname='Description - الوصف*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -2926,7 +2932,7 @@
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_65" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="مشكلة في تسجيل الدخول لصفحة SZHP اسم المستخدم او كلمة السر غير صحيحة ">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_65" Text="مشكلة في تسجيل الدخول لصفحة SZHP اسم المستخدم او كلمة السر غير صحيحة ">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c90a45b1-1f6a-457b-919c-2df8b9b68bc5" InformativeScreenshot="1ad3d42e58f8a9af2e3fcfca9470543e" Selector="&lt;webctrl id='table_*' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='cmt' tableRow='1' tag='INPUT' aaname='Title - العنوان*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -3030,7 +3036,7 @@
                                                                                         </ui:Target>
                                                                                       </ui:SelectItem.Target>
                                                                                     </ui:SelectItem>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_66" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="Description">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_66" Text="Description">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3a4f614-ab05-4e1d-8b1e-e02eaf0d75fe" InformativeScreenshot="b24f68275c37d0ed56fe2746272ac5f4" Selector="&lt;webctrl tableRow='1' tag='TABLE' idx='9' /&gt;&lt;webctrl id='descrpt' tableRow='1' tag='TEXTAREA' aaname='Description - الوصف*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -3101,7 +3107,7 @@
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_55" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="مشكلة في تسجيل الدخول الى MSD المستخدم او كلمة السر غير صحيحة">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_55" Text="مشكلة في تسجيل الدخول الى MSD المستخدم او كلمة السر غير صحيحة">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c90a45b1-1f6a-457b-919c-2df8b9b68bc5" InformativeScreenshot="1ad3d42e58f8a9af2e3fcfca9470543e" Selector="&lt;webctrl id='table_*' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='cmt' tableRow='1' tag='INPUT' aaname='Title - العنوان*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -3205,7 +3211,7 @@
                                                                                         </ui:Target>
                                                                                       </ui:SelectItem.Target>
                                                                                     </ui:SelectItem>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_56" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="Description">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_56" Text="Description">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3a4f614-ab05-4e1d-8b1e-e02eaf0d75fe" InformativeScreenshot="b24f68275c37d0ed56fe2746272ac5f4" Selector="&lt;webctrl tableRow='1' tag='TABLE' idx='9' /&gt;&lt;webctrl id='descrpt' tableRow='1' tag='TEXTAREA' aaname='Description - الوصف*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -3276,7 +3282,7 @@
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_57" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="مشكلة في تسجيل الدخول الى SEDD المستخدم او كلمة السر غير صحيحة">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Title of the exception" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_57" Text="مشكلة في تسجيل الدخول الى SEDD المستخدم او كلمة السر غير صحيحة">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c90a45b1-1f6a-457b-919c-2df8b9b68bc5" InformativeScreenshot="1ad3d42e58f8a9af2e3fcfca9470543e" Selector="&lt;webctrl id='table_*' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='cmt' tableRow='1' tag='INPUT' aaname='Title - العنوان*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -3380,7 +3386,7 @@
                                                                                         </ui:Target>
                                                                                       </ui:SelectItem.Target>
                                                                                     </ui:SelectItem>
-                                                                                    <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="True" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_58" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="Description">
+                                                                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Description" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,156" sap2010:WorkflowViewState.IdRef="TypeInto_58" Text="Description">
                                                                                       <ui:TypeInto.Target>
                                                                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3a4f614-ab05-4e1d-8b1e-e02eaf0d75fe" InformativeScreenshot="b24f68275c37d0ed56fe2746272ac5f4" Selector="&lt;webctrl tableRow='1' tag='TABLE' idx='9' /&gt;&lt;webctrl id='descrpt' tableRow='1' tag='TEXTAREA' aaname='Description - الوصف*' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
@@ -3469,7 +3475,7 @@
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </ui:LogMessage>
-                                                                        <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="Foot print(Tickect raise) login issue Log Message" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[Now.ToString+vbTab+&quot;Foot print(Tickect raise) login issue&quot;]" UseDefaultEncoding="False" />
+                                                                        <ui:AppendLine File="{x:Null}" DisplayName="Foot print(Tickect raise) login issue Log Message" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[Now.ToString+vbTab+&quot;Foot print(Tickect raise) login issue&quot;]" UseDefaultEncoding="False" />
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
@@ -3485,7 +3491,7 @@
                                                                 </Sequence>
                                                               </If.Else>
                                                             </If>
-                                                            <ui:CloseTab Browser="[Open_FootPrint]" ContinueOnError="{x:Null}" DisplayName="Close Foot print tab" sap:VirtualizedContainerService.HintSize="665.6,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                                                            <ui:CloseTab Browser="[Open_FootPrint]" DisplayName="Close Foot print tab" sap:VirtualizedContainerService.HintSize="665.6,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                                                             <Assign DisplayName="Assign Ticket raised config" sap:VirtualizedContainerService.HintSize="665.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_16">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Object">[in_Config("Ticket_Raised")]</OutArgument>
@@ -3532,7 +3538,7 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                           </ui:LogMessage>
-                                                          <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="Foot print(Tickect raise) login issue Log Message" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="[Now.ToString+vbTab+&quot;Foot print(Tickect raise) page loding issue&quot;]" UseDefaultEncoding="False" />
+                                                          <ui:AppendLine File="{x:Null}" DisplayName="Foot print(Tickect raise) login issue Log Message" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="[Now.ToString+vbTab+&quot;Foot print(Tickect raise) page loding issue&quot;]" UseDefaultEncoding="False" />
                                                         </Sequence>
                                                       </ActivityAction>
                                                     </Catch>
@@ -3552,7 +3558,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:LogMessage DisplayName="No Login Exception log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No Login exception occured&quot;]" />
-                                        <ui:AppendLine ContinueOnError="{x:Null}" DisplayName="No Login Exception log Message" Encoding="{x:Null}" File="{x:Null}" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[Now.ToString+vbTab+&quot;No Login exception occured&quot;]" UseDefaultEncoding="False" />
+                                        <ui:AppendLine File="{x:Null}" DisplayName="No Login Exception log Message" FileName="[In_Config(&quot;ProcessLogPath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[Now.ToString+vbTab+&quot;No Login exception occured&quot;]" UseDefaultEncoding="False" />
                                       </Sequence>
                                     </If.Else>
                                   </If>
@@ -3573,7 +3579,7 @@
                                       <InArgument x:TypeArguments="x:Int32">[io_ConsecutiveSystemExceptions+1]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="652.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Framework/RetryCurrentTransaction.xaml">
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="652.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework/RetryCurrentTransaction.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                       <InOutArgument x:TypeArguments="x:Int32" x:Key="io_RetryNumber">[io_RetryNumber]</InOutArgument>
@@ -3602,7 +3608,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -3635,7 +3641,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <TryCatch.Try>
-                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
                                                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                   </ui:InvokeWorkflowFile.Arguments>
@@ -3722,12 +3728,12 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]" DisplayName="If TransactionItem is a QueueItem (Business Exception)" sap:VirtualizedContainerService.HintSize="449.6,183.2" sap2010:WorkflowViewState.IdRef="If_5">
                   <If.Then>
-                    <ui:RetryScope ContinueOnError="{x:Null}" DisplayName="Retry Set Transaction Status (Business Exception)" sap:VirtualizedContainerService.HintSize="478.4,600.8" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberSetTransactionStatus&quot;))]" RetryInterval="{x:Null}">
+                    <ui:RetryScope DisplayName="Retry Set Transaction Status (Business Exception)" sap:VirtualizedContainerService.HintSize="478.4,600.8" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberSetTransactionStatus&quot;))]">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <TryCatch DisplayName="Try Catch Set Transaction Status (Business Exception)" sap:VirtualizedContainerService.HintSize="436.8,424.8" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                             <TryCatch.Try>
-                              <ui:SetTransactionStatus AssociatedFilePath="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Set transaction status (Business Exception status)" ErrorType="Business" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,193.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_5" Reason="[in_BusinessException.Message]" ServiceBaseAddress="{x:Null}" Status="Failed" TransactionItem="[in_TransactionItem]">
+                              <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" DisplayName="Set transaction status (Business Exception status)" ErrorType="Business" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334.4,193.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_5" Reason="[in_BusinessException.Message]" Status="Failed" TransactionItem="[in_TransactionItem]">
                                 <ui:SetTransactionStatus.Analytics>
                                   <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                                 </ui:SetTransactionStatus.Analytics>

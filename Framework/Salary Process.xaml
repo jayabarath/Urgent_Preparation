@@ -412,23 +412,6 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="salary pdf tab" sap:VirtualizedContainerService.HintSize="817.6,284" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="503f5442f7995cff3d1b3033efbfe5a5" Selector="&lt;html app='chrome.exe' title='Directorate of Housing' /&gt;" UiBrowser="[Salary_PdfPage]">
-                  <ui:BrowserScope.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,136.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:CloseTab Browser="[Salary_PdfPage]" DisplayName="Close salary pdf Tab" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:BrowserScope.Body>
-                </ui:BrowserScope>
                 <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="10" DisplayName="Type File name and path" EmptyField="True" sap:VirtualizedContainerService.HintSize="817.6,156" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[Salary_Folder +&quot;\&quot;+&quot;Salary&quot;+&quot;.pdf&quot;]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="74d4f130-9683-4b26-8483-05b9e4889e2f" InformativeScreenshot="5ddf7e45659961c54479d898b3214210" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save *As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
@@ -537,6 +520,23 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="salary pdf tab" sap:VirtualizedContainerService.HintSize="817.6,284" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="503f5442f7995cff3d1b3033efbfe5a5" Selector="&lt;html app='chrome.exe' title='Directorate of Housing' /&gt;" UiBrowser="[Salary_PdfPage]">
+                  <ui:BrowserScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,136.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:CloseTab Browser="[Salary_PdfPage]" DisplayName="Close salary pdf Tab" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:BrowserScope.Body>
+                </ui:BrowserScope>
                 <Assign sap:VirtualizedContainerService.HintSize="817.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[PDFRead]</OutArgument>
